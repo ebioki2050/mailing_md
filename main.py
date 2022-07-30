@@ -10,7 +10,7 @@ def read_md_file(path_md_file):
   text_markdown = ""
   with open(path_md_file, "r", encoding='UTF-8') as file:
     text_markdown = file.read()
-    text_markdown = text_markdown.replace('- [ ] ', '- <input type="checkbox" name="checkbox2" value="checkbox"> ')
+    text_markdown = text_markdown.replace('- [ ] ', '- <input type="checkbox" name="checkbox" value="checkbox">')
   return text_markdown
 
 def render_html_mail_content_from_md_file(text_markdown):
