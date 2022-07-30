@@ -1,0 +1,20 @@
+#!/bin/bash
+
+COMMITMESSAGE=${1}
+REMOTEBRANCH=${2}
+REPOSITORYDIR=`cd $(dirname ${0}) && pwd`
+REPOSITORYNAME=`basename ${REPOSITORYDIR}` 
+#echo "REPOSITORYDIR: ${REPOSITORYDIR}"
+#echo "Repository: ${REPOSITORYNAME}"
+
+REPOSITORYURL=$(git -C ${REPOSITORYDIR} config --get remote.origin.url )
+#echo "REPOSITORYURL: ${REPOSITORYURL}"
+LOCALBRANCH=$(git -C ${REPOSITORYDIR} rev-parse --abbrev-ref HEAD)
+#echo "LOCALBRANCH: ${LOCALBRANCH}"
+
+#cd "${HOME}/${REPOSITORYNAME}"
+
+git -C ${REPOSITORYDIR} init
+git -C ${REPOSITORYDIR} add -A
+git -C ${REPOSITORYDIR} commit -m ${COMMITMESSAGE}
+git -C ${REPOSITORYDIR} push ${REPOSITORYURL} ${LOCALBRANCH}:${REMOTEBRANCH}
