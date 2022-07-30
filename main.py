@@ -12,7 +12,7 @@ def read_md_file(path_md_file):
     text_markdown = file.read()
     text_markdown = text_markdown.replace('- [ ] ', '- <input type="checkbox" name="checkbox2" value="checkbox"> ')
   return text_markdown
-  
+
 def render_html_mail_content_from_md_file(text_markdown):
   message = MIMEMultipart()
   md = markdown.Markdown(extensions=['tables'])
@@ -26,14 +26,14 @@ def main():
   # initialize
   load_dotenv('./.env')
   path_md_file = os.environ['PATHMDFILE']
+  from_address = os.environ['FROMADDRESS']
+  to_address = os.environ['TOADDRESS']
+  app_pass = os.environ['GOOGLEAPPPASSWORD']
 
   # prepare smtp object
   smtp_server = "smtp.gmail.com"
-  from_address = os.environ['FROMADDRESS']
-  to_address = os.environ['TOADDRESS']
-  login_name = from_address
-  app_pass = os.environ['GOOGLEAPPPASSWORD']
   sender = smtplib.SMTP_SSL(smtp_server)
+  login_name = from_address
   sender.login(login_name, app_pass)
 
   # load a markdown file 
