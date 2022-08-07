@@ -7,20 +7,6 @@ import datetime
 from dotenv import load_dotenv
 import sys
 
-
-def read_md_file(path_md_file):
-  text_markdown = ""
-  with open(path_md_file, "r", encoding='UTF-8') as file:
-    text_markdown = file.read()
-    target = '## Dayly'  
-    idx = text_markdown.find(target)
-    text_markdown = text_markdown[idx+len(target):]
-    target = '\n## '
-    idx = text_markdown.find(target)
-    text_markdown = text_markdown[:idx]
-  return text_markdown
-
-
 def readlines_md_file(path_md_file, start_to_read_with, end_to_read_with, split_with, text_if_in):
   # load a .md file and put it in argument "text_markdown"
   text_markdown = ""
