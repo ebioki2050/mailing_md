@@ -1,4 +1,4 @@
 #!/bin/bash
 cd $(dirname ${0})
-rm send_in.txt 
+rm day_sent1.txt 
 /home/ebi2050/developments/mailing_md/execute1.sh

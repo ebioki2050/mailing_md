@@ -8,7 +8,7 @@
   - treatments
   - [how to treat your hair](https://...)
 <!-- - cutting hair -->
-- [ ] breakfast
+- breakfast
 - [ ] read 10 pages of a book
 
 
