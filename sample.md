@@ -1,5 +1,6 @@
 # to do list 
-## morning
+## Dayly
+### morning
 - take a shower
 - treat hair
   - wash
@@ -11,14 +12,14 @@
 - [ ] read 10 pages of a book
 
 
-## in a day
-### work
+### in a day
+#### work
 - check email
 
-### hobby
+#### hobby
 - [ ] send 3 tweet of interest
 
-### outdoor
+#### outdoor
 
 | close to house | use transportation | buy something |
 |---|---|---|
@@ -26,8 +27,14 @@
 | hancatheif | | large bag enough to put in goods |
 
 
-## evening
+### evening
 - take a bath
 - [ ] read 90 pages of a book
 - brush teeth
+
+## weekly
+- monday meeting
+
+## monthly
+- check: accounts settlement
 

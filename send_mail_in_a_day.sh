@@ -7,8 +7,8 @@ echo ${date_sended_in}
 echo ${today}
 
 if [ "$date_sended_in" != "$today" ]; then
-  echo $today > ./send_in.txt
   python3 main.py
+  echo $today > ./send_in.txt
 else
   echo "todays mail has been sent."
 fi
