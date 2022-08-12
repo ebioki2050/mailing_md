@@ -82,7 +82,7 @@ def main():
   # load a markdown file as a list of texts and get title
   title_md = os.path.splitext(os.path.basename(path_md_file))[0]
   if (title_shortize):
-    title_md = title_md[:3]
+    title_md = title_md[:4]
 
   text_markdown_lines = readlines_md_file(path_md_file, md_file_range_from, md_file_range_to, md_file_splitter, text_if_in)
 
