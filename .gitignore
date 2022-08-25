@@ -1,7 +1,7 @@
 *.env
-execute*.*
-test*.*
-day_sent*.txt
+*.sh
+*.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
