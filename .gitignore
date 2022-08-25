@@ -1,6 +1,6 @@
-*.env
-*.sh
-*.txt
+./*.env
+./*.sh
+./*.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
