@@ -27,18 +27,19 @@ def readlines_md_file(path_md_file, start_to_read_with, end_to_read_with, split_
   row_lines = []
   if (len(split_with)>0):
     for line in text_markdown.split(split_with):
-      row_lines.append(line) 
+      row_lines.append(split_with.replace("\n", "") + line) 
   else:
     row_lines.append(text_markdown)
   # select lines which mutch with a condition
   text_markdown_lines = []
   if (len(text_if_in)>0):
     for line in row_lines:
-      if text_if_in in line:
+      if (len(line)!=0) & (text_if_in in line):
         text_markdown_lines.append(line.replace(text_if_in, ""))
   else:
-    for line in row_lines:
-      text_markdown_lines.append(line)
+    if (len(line)!=0):
+      for line in row_lines:
+        text_markdown_lines.append(line)
   text_markdown_lines.reverse()
   return text_markdown_lines
 
