@@ -36,7 +36,7 @@
 - sample.md
 - execute.sh
 - day_sent.txt
-- .env
+- .env(rename .env-example)
 
 ## sub files 
 - test.sh 
