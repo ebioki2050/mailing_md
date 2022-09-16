@@ -17,7 +17,7 @@ def readlines_md_file(path_md_file, start_to_read_with, end_to_read_with, split_
   if (len(start_to_read_with)>0):
     target = start_to_read_with 
     idx = text_markdown.find(target)
-    text_markdown = text_markdown[idx+len(target):]
+    text_markdown = text_markdown[idx:]
   if (len(end_to_read_with)>0):
     target = end_to_read_with
     idx = text_markdown.find(target)
