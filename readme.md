@@ -26,9 +26,9 @@
 
 ## prepare 
 - edit sample.md or select markdown path in .env .
-- set environment arguments in .env or ${HOME}/.bash_profile .
+- set environment arguments in .env .
 - option: 
-  - (windows)set starts up shortcut or .bat file runs `wsl ${HOME}/.../mailing_md/execute1.sh`
+  - (windows)set starts up shortcut or .bat file runs `wsl ${HOME}/.../mailing_md/execute.sh`
   - (mac or linux) set cron runs execute.sh 
 
 ## main structure 

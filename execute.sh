@@ -1,6 +1,6 @@
 #!/bin/bash
 cd $(dirname ${0})
-source ./bash_profile
+source .env
 
 # initialize
 path_sent_day="day_sent.txt"
