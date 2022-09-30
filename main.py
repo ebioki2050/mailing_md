@@ -16,7 +16,7 @@ def readlines_md_file(path_md_file, start_to_read_with, end_to_read_with, split_
   # get text_markdown in a specific range we want
   if (len(start_to_read_with)>0):
     target = start_to_read_with 
-    idx = text_markdown.find(target)
+    idx = text_markdown.find(target) 
     text_markdown = text_markdown[idx:]
   if (len(end_to_read_with)>0):
     target = end_to_read_with
@@ -27,6 +27,8 @@ def readlines_md_file(path_md_file, start_to_read_with, end_to_read_with, split_
   row_lines = []
   if (len(split_with)>0):
     for line in text_markdown.split(split_with):
+      if len(line) == 0:
+        continue
       row_lines.append(split_with.replace("\n", "") + line) 
   else:
     row_lines.append(text_markdown)
