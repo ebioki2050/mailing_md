@@ -61,8 +61,8 @@ def main():
   # initialize(read env file)
   load_dotenv('./.env')
   path_md_file = os.environ['PATHMDFILE']
-  from_address = os.environ['FROMADDRESS']
-  to_address = os.environ['TOADDRESS']
+  from_address = os.environ['GMAILADDRESS']
+  to_address = os.environ['GMAILADDRESS']
   app_pass = os.environ['GOOGLEAPPPASSWORD']
 
   # initialize(read arguments)
