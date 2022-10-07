@@ -39,8 +39,8 @@ def readlines_md_file(path_md_file, start_to_read_with, end_to_read_with, split_
       if (len(line)!=0) & (text_if_in in line):
         text_markdown_lines.append(line.replace(text_if_in, ""))
   else:
-    if (len(line)!=0):
-      for line in row_lines:
+    for line in row_lines:
+      if (len(line)!=0):
         text_markdown_lines.append(line)
   text_markdown_lines.reverse()
   return text_markdown_lines
