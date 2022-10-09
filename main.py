@@ -26,7 +26,7 @@ def readlines_md_file(path_md_file, start_to_read_with, end_to_read_with, split_
   # split text_markdown and put it in list
   row_lines = []
   if (len(split_with)>0):
-    for line in text_markdown.split(split_with):
+    for line in text_markdown.split("{}".format(split_with)):
       if len(line) == 0:
         continue
       row_lines.append(split_with.replace("\n", "") + line) 
