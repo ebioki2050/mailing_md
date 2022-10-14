@@ -57,6 +57,9 @@ def render_html_mail_content_from_md_file(text_markdown, content_appendix):
   message.attach(MIMEText(content_html, "html"))
   return message
 
+def make_subject(date_to_send, title_md, str_count, str_count_all):
+  return date_to_send + " " + title_md + " " + str_count + "/" + str_count_all + " (Mailing_Md By Python)"
+
 def main():
   # initialize(read env file)
   load_dotenv('./.env')
@@ -95,7 +98,8 @@ def main():
     message["FROM"]=from_address
     message["TO"]=to_address
     date_today = datetime.datetime.today().strftime("%Y-%m-%d")
-    message["subject"]= date_today + " " + title_md + " " + str(count+1) + "/" + str(len(text_markdown_lines))
+    # message["subject"] = date_today + " " + title_md + " " + str(count+1) + "/" + str(len(text_markdown_lines))
+    message["subject"] = make_subject(date_today, title_md, str(count+1), str(len(text_markdown_lines)))
     sender.send_message(message)
     print("send mail of {}/{}".format(count+1, len(text_markdown_lines)))
 
